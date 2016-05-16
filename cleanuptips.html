@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<title>Innovating for Environmental Health</title>
+	<link rel="stylesheet" href="css/mold.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
+	<script src="js/startdiction.js"></script>
+	<script>
+		var needToConfirm = true;
+	  
+	  window.onbeforeunload = confirmExit;
+	  function confirmExit()
+	  {
+	    if (needToConfirm)
+	      window.speechSynthesis.cancel();
+	  }
+	</script>
+	<style>
+		body{
+			background-image: url("dark-wood.jpg");
+		}
+	</style>
+</head>
+<body>
+
+	<script>
+		$(function() {
+
+		var worte = new SpeechSynthesisUtterance("Cleanup tips.  Trained staff or contractors? How can you tell?  Only people who have been specially trained should remove damaged materials.  Contain the remediation area so that spores don't spread.  The protective equipment needs will vary according to how extensive the molds are, but the minimum is gloves and eye protection, plus an N-95 respirator that covers the nose and mouth and filters 95% of the particles in the air.  These respirators are available in many hardware stores.  Don't use school children to remove moldy materials and don't do it yourself! does your school have enough custodians to stay current on repairs? If so, the custodial crew can sometimes handle small mold remediation jobs. The best way to remove mold‐contaminated material depends on how much mold is present and where it is.  <cite>Article Title: Guide To Molds at School</cite> Retrieved May 13, 2016, from http://www.healthyschools.org/downloads/molds.pdf  If you choose to use outside contractors or professionals, make sure they have experience cleaning up mold, check their references and have them follow the recommendations presented in this document, the guidelines of the American Conference of Government Industrial Hygienists (ACGIH) and/or guidelines from other professional organizations.  <cite>Mold Remediation in Schools and Commercial Buildings Guide.</cite> EPA. Environmental Protection Agency. Web. 15 May 2016., https://www.epa.gov/mold/mold-remediation-schools-and-commercial-buildings-guide  See the buttons below for specific assessment and cleanup tips ");
+
+			var stimmen = window.speechSynthesis.getVoices();
+			worte.lang = "it-IT";
+			worte.voice = stimmen[5];
+			worte.pitch = 15;
+			worte.rate = 1;
+			window.speechSynthesis.speak(worte);
+
+			document.getElementById('stop').addEventListener('click', function(event) {
+				event.preventDefault();
+
+				window.speechSynthesis.cancel();
+				advise.innerHTML = 'Speaker Stopped';
+			});
+
+			document.getElementById('pause').addEventListener('click', function(event) {
+				event.preventDefault();
+
+				window.speechSynthesis.pause();
+				advise.innerHTML = 'Speaker Paused';
+			});
+
+			document.getElementById('resume').addEventListener('click', function(event) {
+				event.preventDefault();
+
+				window.speechSynthesis.resume();
+				advise.innerHTML = 'Speaker Resumes';
+			});
+
+			});
+
+	</script>
+
+
+
+	<div class="wrapper">
+	<header><h1>CLEANUP TIPS</h1></header>
+	<nav>
+		<ul>
+			<li><a href="index.html" class="current">HOME</a></li>
+			<li><a href="about.html">ABOUT MOLD</a></li>
+			<li><a href="moldremediationplan.html">MOLD REMEDIATION</a></li>
+			<li><a href="moldprevention.html">MOLD PREVENTION</a></li>
+		</ul>
+	</nav>
+	<div id="btnspk">
+		<span id="btncontrolspeech">
+			<button id="stop" autofocus>Stop Speaking</button>
+			<button id="pause">Pause Speaking</button>
+			<button id="resume">Resume Speaking</button>
+			<span id="advise"></span>
+		</span>
+	</div></br>
+
+	<article>
+		<p><b>Trained staff or contractors? How can you tell?</b></br></br>
+			Only people who have been specially trained should remove damaged materials.  Contain the remediation area so that spores don't spread.  The protective equipment needs will vary according to how extensive the molds are, but the minimum is gloves and eye protection, plus an N-95 respirator that covers the nose and mouth and filters 95% of the particles in the air.  These respirators are available in many hardware stores.
+		</br></br>
+			Don't use school children to remove moldy materials and don't do it yourself! Does your school have enough custodians to stay current on repairs? If so, the custodial crew can sometimes handle small mold remediation jobs. The best way to remove mold‐contaminated material depends on how much mold is present and where it is. 
+		</br></br>
+
+			<cite>Article Title: Guide To Molds at School</cite> Retrieved May 13, 2016, from http://www.healthyschools.org/downloads/molds.pdf</br></br>
+
+			If you choose to use outside contractors or professionals, make sure they have experience cleaning up mold, check their references and have them follow the recommendations presented in this document, the guidelines of the American Conference of Government Industrial Hygienists (ACGIH) and/or guidelines from other professional organizations.</br></br>  <cite>"Mold Remediation in Schools and Commercial Buildings Guide."</cite> EPA. Environmental Protection Agency. Web. 15 May 2016., https://www.epa.gov/mold/mold-remediation-schools-and-commercial-buildings-guide</br></br>
+			See buttons below for specific assessment and cleanup tips
+		</p>
+	</article>
+	</div>
+
+	<div class="wrapper2">
+		<a href="cleanuptips.html"><button type="button" class="cleanup">CLEANUP TIPS</button></a>
+		<a href="surfacearea.html"><button type="button" class="cleanup">SURFACE AREA</button></a>
+		<a href="waterlogged.html"><button type="button" class="cleanup">WATERLOGGED ITEMS</button></a>
+	</div>
+
+</body>
+</html>

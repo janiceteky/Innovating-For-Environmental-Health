@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<title>HARD SURFACES TIPS</title>
+	<link rel="stylesheet" href="css/mold.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
+	<script src="js/startdiction.js"></script>
+	<style>
+		body{
+			background-image: url("dark-wood.jpg");
+		}
+	</style>
+</head>
+<body>
+
+	<script>
+		$(function() {
+
+		var worte = new SpeechSynthesisUtterance("Areas like walls, ceilings, and uncarpeted floors can usually be damp‐wiped, either with water alone or with a solution of water and detergent. (For wood, however, use special wood cleaners.) Scrub the surface. Discard rags or other items used in the cleanup.")
+
+		var stimmen = window.speechSynthesis.getVoices();
+			worte.lang = "it-IT";
+			worte.voice = stimmen[5];
+			worte.pitch = 15;
+			worte.rate = 1;
+			window.speechSynthesis.speak(worte);
+
+			document.getElementById('stop').addEventListener('click', function(event) {
+				event.preventDefault();
+
+				window.speechSynthesis.cancel();
+				advise.innerHTML = 'Speaker Stopped';
+			});
+
+			document.getElementById('pause').addEventListener('click', function(event) {
+				event.preventDefault();
+
+				window.speechSynthesis.pause();
+				advise.innerHTML = 'Speaker Paused';
+			});
+
+			document.getElementById('resume').addEventListener('click', function(event) {
+				event.preventDefault();
+
+				window.speechSynthesis.resume();
+				advise.innerHTML = 'Speaker Resumes';
+			});
+
+	});
+
+	</script>
+
+	<div class="wrapper">
+	<header><h1>HARD SURFACES TIPS</h1></header>
+	<nav>
+		<ul>
+			<li><a href="" class="current">HOME</a></li>
+			<li><a href="about.html">ABOUT MOLD</a></li>
+			<li><a href="moldremediationplan.html">MOLD REMEDIATION</a></li>
+			<li><a href="moldprevention.html">MOLD PREVENTION</a></li>
+		</ul>
+	</nav>
+	<div id="btnspk">
+		<span id="btncontrolspeech">
+			<button id="stop" autofocus>Stop Speaking</button>
+			<button id="pause">Pause Speaking</button>
+			<button id="resume">Resume Speaking</button>
+			<span id="advise"></span>
+		</span>
+	</div></br>
+
+	<article>
+		<p>Areas like walls, ceilings, and uncarpeted floors can usually be damp‐wiped, either with water alone or with  a solution of water and detergent. ( For wood, however, use special wood cleaners.) Scrub the surface. Discard rags or other items used in the cleanup.</p>
+	</article>
+
+	</div>
+
+	<div class="wrapper2">
+		<a href="cleanuptips.html"><button type="button" class="cleanup">CLEANUP TIPS</button></a>
+		<a href="surfacearea.html"><button type="button" class="cleanup">SURFACE AREA</button></a>
+		<a href="waterlogged.html"><button type="button" class="cleanup">WATERLOGGED ITEMS</button></a>
+		<a href="hardsurfaces.html"><button type="button" class="cleanup">HARD SURFACES</button></a>
+	</div>
+
+</body>
+</html>

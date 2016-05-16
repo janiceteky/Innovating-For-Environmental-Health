@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<title>INNOVATING FOR ENVIRONMENTAL HEALTH</title>
+	<link rel="stylesheet" href="css/mold.css">
+	<link rel="stylesheet" href="https://js.arcgis.com/3.16/esri/css/esri.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script>
+		var needToConfirm = true;
+	  
+	  window.onbeforeunload = confirmExit;
+	  function confirmExit()
+		  {
+		    if (needToConfirm)
+		      window.speechSynthesis.cancel();
+		  }
+	</script>
+	<style>
+		body{
+			background-image: url("dark-wood.jpg");
+		}
+		.sidebar {
+			display: inline-block;
+			margin: 50px 50px 100px 500px;
+			/*margin: 20px auto 20px auto;*/
+			border: 2px solid #000000;
+			background-color: lightskyblue;
+		}
+		
+		}
+	</style>
+	<link rel="stylesheet" href="https://js.arcgis.com/3.16/esri/css/esri.css">
+	<!--<script src="javascript/graphics.js"></script>-->
+	<script src="https://js.arcgis.com/3.16/"></script>
+
+</head>
+<body>
+
+	<script>
+		$(function() {
+
+		var worte = new SpeechSynthesisUtterance("The purpose of this website is to provide guidance for The staff of the nation's elementary, middle, and high schools in order to have an indoor air quality management program and to address mold problems to promote a healthy and safe physical school environment  Allergies and Mold  We are in the midst of a national asthma epidemic that is still not well understood, and some neighborhoods have been hit hard.  Mold can also be responsible for adult work related asthma on the job.  Recent studies have shown high levels of asthma-triggering molds in some schools.  Asthma is the leading cause of school absenteeism due to chronic illness.(Source: US Environmental Protection Agency, Managing Asthma in the school Environment.  <cite>Article Title: Mold At School</cite> retrieved May 12, 2016, from http://www.healthyschools.org/downloads/Mold_At_School.pdf");
+
+			var stimmen = window.speechSynthesis.getVoices();
+			worte.lang = "it-IT";
+			worte.voice = stimmen[5];
+			worte.pitch = 15;
+			worte.rate = 1;
+			window.speechSynthesis.speak(worte);
+
+			document.getElementById('stop').addEventListener('click', function(event) {
+				event.preventDefault();
+
+				window.speechSynthesis.cancel();
+				advise.innerHTML = 'Speaker Stopped';
+			});
+
+			document.getElementById('pause').addEventListener('click', function(event) {
+				event.preventDefault();
+
+				window.speechSynthesis.pause();
+				advise.innerHTML = 'Speaker Paused';
+			});
+
+			document.getElementById('resume').addEventListener('click', function(event) {
+				event.preventDefault();
+
+				window.speechSynthesis.resume();
+				advise.innerHTML = 'Speaker Resumes';
+			});
+
+			});
+
+	</script>
+
+	<div id="btnspk">
+			<span id="btncontrolspeech">
+				<button id="stop" autofocus>Stop Speaking</button>
+				<button id="pause">Pause Speaking</button>
+				<button id="resume">Resume Speaking</button>
+				<span id="advise"></span>
+			</span>
+	</div></br>
+
+	<nav class="homeindex">
+		<ul>
+			<li><a href="about.html"><button type="button" class="cleanup">ABOUT MOLD</button></a></li></br>
+			<li><a href="MoldRemediationPlan.html"><button type="button" class="cleanup">MOLD REMEDIATION PLAN</button></a></li></br>
+			<li><a href="moldprevention.html"><button type="button" class="cleanup">MOLD PREVENTION	</button></a></li>
+		</ul>
+	</nav>
+
+	<article class="sidebar">
+
+			<p>The purpose of this website is to provide guidance for The staff of the nation's elementary, middle, and high schools in order to have an indoor air quality management program and to address mold problems to promote a healthy and safe physical school environment.
+			<h3>Allergies and Mold</h3>
+			We are in the midst of a national asthma epidemic that is still not well understood, and some neighborhoods have been hit hard.  ...Mold can also be responsible for adult "work-related asthma" on the job.  Recent studies have shown high levels of asthma-triggering molds in some schools.  Asthma is the leading cause of school absenteeism due to chronic illness.(Source: US Environmental Protection Agency, Managing Asthma in the school Environment)
+			</br>
+			<cite>Article Title: Mold At School</cite> retrieved May 12, 2016, from http://www.healthyschools.org/downloads/Mold_At_School.pdf
+			</p>
+
+	</article>
+
+		<div class="col-md-8 embed-responsive embed-responsive-16by9">
+        
+	        <style>
+		        .embed-container {
+					position: relative; 
+					padding-bottom: 80%; 
+					height: 0; 
+					max-width: 100%;
+				} 
+				.embed-container iframe, .embed-container object, .embed-container iframe {
+					position: absolute; 
+					top: 0; 
+					left: 0; 
+					width: 100%; 
+					height: 100%;
+				} 
+				small { 
+					position: absolute; 
+					z-index: 40; 
+					bottom: 0; 
+					margin-bottom: -15px;
+				}
+		    </style>
+
+	        <div class="embed-container">
+
+	        	<iframe width="500" height="400" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" title="My First Map" src="//panthergirl2.maps.arcgis.com/apps/Embed/index.html?webmap=7b2bd4f7fd284facb14c6c6a0a34c91e&amp;extent=-146.989,18.0338,-49.9577,61.6756&amp;zoom=true&amp;scale=true&amp;disable_scroll=true&amp;theme=light">
+				</iframe>
+	        </div>
+        
+      	</div>
+
+	
+  <script src="https://esri.github.io/calcite-bootstrap/assets/js/bootstrap.min.js"></script>
+</body>
+</html>

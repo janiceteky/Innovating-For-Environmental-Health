@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<title>Innovating for Environmental Health</title>
+	<link rel="stylesheet" href="css/mold.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
+	<script src="js/startdiction.js"></script>
+	<script>
+		var needToConfirm = true;
+	  
+	  window.onbeforeunload = confirmExit;
+	  function confirmExit()
+	  {
+	    if (needToConfirm)
+	      window.speechSynthesis.cancel();
+	  }
+	</script>
+
+	<style>
+		body{
+			background-image: url("dark-wood.jpg");
+		}
+	</style>
+</head>
+<body>
+	<script>
+		$(function() {
+
+		var worte = new SpeechSynthesisUtterance("ABOUT MOLD, Understanding the importance of good indoor air quality in schools is the backbone of developing an effective indoor air quality program.  Poor indoor air quality can lead to a large variety of health problems and potentially affect comfort, concentration and staff/student performance.  Since most people spend 90 percent of their time indoors, children especially are at risk of exposure to indoor air pollutants, they breathe in more air than adults.  In addition, schools have reported experiencing poor ventilation which is a precursor to increased buildup of other indoor air pollutants.  As a result, student and teacher performance reportedly decrease in buildings with similar symptoms.  While these facts may represent school buildings in many counties, school administrators can adopt practices measures that lead to improved indoor environment.  citation: Presentation Title: Tools for Schools. (n.d.). Retrieved May 07, 2016, from http://www.nehacert.org/Abstracts/IAQ0904_Blakely_Abstract.htm. Four Things You Should Know About Mold.   number 1 About Toxic molds  Virtually all molds have the potential to affect health, but some have received particular attention   because they can release toxic substances called mycotoxins. These can cause health problems such as  sinus inflammation, nose bleeds, and respiratory diseases, and can irritate existing asthma and allergies.  Further, some have neurotoxic, reproductive and carcinogenic properties.  Molds can also create microbial volatile organic compounds (mVoc's), which can cause headaches, dizziness, nausea and other symptoms.	number 2 Potential health effects and symptoms associated with mold exposures include allergic reactions, asthma, pneumonia like symptoms and eye and nose irritation.  number 3 There is no practical way to eliminate all mold and mold spores in the indoor environment; the way to control indoor mold growth is to control moisture number 4 Molds can be found almost anywhere; they can grow on virtually any substance, providing moisture is present. There are molds that can grow on wood, paper, carpet, and foods.QUESTIONS TO CONSIDER BEFORE REMEDIATION  number 1 Are there existing moisture problems in the building?  number 2 Have building materials been wet more than 48 hours?  number 3 Are there hidden sources of water or is the humidity too high (high enough to cause condensation)?  number 4 Are building occupants reporting musty or moldy odors?  number 5 Are building occupants reporting health problems?		number 6 Are building materials or furnishings visibly damaged?  number 7 Has maintenance been delayed or the maintenance plan been altered?  number 8 Has the building been recently remodeled or has building use changed?  number 9 Is consultation with medical or health professionals indicated? Presentation Title: <cite>moldremediation.pdf</cite> Retrieved May 07, 2016, from https://www.epa.gov/sites/production/files/2014-08/documents/moldremediation.pdf");
+			var stimmen = window.speechSynthesis.getVoices();
+			worte.lang = "en-UK";
+			worte.voice = stimmen[5];
+			worte.pitch = 15;
+			worte.rate = 1;
+			window.speechSynthesis.speak(worte);
+
+			document.getElementById('stop').addEventListener('click', function(event) {
+				event.preventDefault();
+
+				window.speechSynthesis.cancel();
+				advise.innerHTML = 'Speaker Stopped';
+			});
+
+			document.getElementById('pause').addEventListener('click', function(event) {
+				event.preventDefault();
+
+				window.speechSynthesis.pause();
+				advise.innerHTML = 'Speaker Paused';
+			});
+
+			document.getElementById('resume').addEventListener('click', function(event) {
+				event.preventDefault();
+
+				window.speechSynthesis.resume();
+				advise.innerHTML = 'Speaker Resumes';
+			});
+
+		});
+
+	</script>
+
+	<div class="wrapper">
+	<header><h1>ABOUT MOLD</h1></header>
+	<nav>
+		<ul>
+			<li><a href="index.html" class="current">HOME</a></li>
+			<li><a href="about.html">ABOUT MOLD</a></li>
+			<li><a href="moldremediationplan.html">MOLD REMEDIATION</a></li>
+			<li><a href="moldprevention.html">MOLD PREVENTION</a></li>
+		</ul>
+	</nav>
+	<div id="btnspk">
+		<span id="btncontrolspeech">
+			<button id="stop" autofocus>Stop Speaking</button>
+			<button id="pause">Pause Speaking</button>
+			<button id="resume">Resume Speaking</button>
+			<span id="advise"></span>
+		</span>
+	</div>
+
+	<article>
+		<h3>Indoor Air Quality</h3>
+		<p>Understanding the importance of good indoor air quality (IAQ) in schools is the backbone of developing an effective IAQ program. Poor IAQ can lead to a large variety of health problems and potentially affect comfort, concentration and staff/student performance.  Since most people spend 90 percent of their time indoors, children especially are at risk of exposure to indoor air pollutants, they breathe in more air than adults.
+
+		In addition, schools have reported experiencing poor ventilation which is a precursor to increased buildup of other indoor air pollutants.  As a result, student and teacher performance reportedly decrease in buildings with similar symptoms.  While these facts may represent schools buildings in many counties, school administrators can adopt practices measures that lead to improved indoor environment.
+
+		Presentation Title: <cite>Tools for Schools.</cite> (n.d.). Retrieved May 07, 2016, from http://www.nehacert.org/Abstracts/IAQ0904_Blakely_Abstract.htm
+		</p>
+		<h3> Four things you should know about molds</h3>
+		<p>
+		<ol> 1.  "Toxic" molds -- Virtually all molds have the potential to affect health, but some have received particular attention because they can release toxic substances called mycotoxins. These can cause health problems such as sinus inflammation, nose bleeds, and respiratory diseases, and can irritate existing asthma and allergies.  Further, some have neurotoxic, reproductive and carcinogenic properties.  Molds can also create microbial volatile organic compounds (mVoc's), which can cause headaches, dizziness, nausea and other symptoms.
+		</ol>
+		<ol>
+		2.  Potential health effects and symptoms associated with mold exposures include allergic reactions, asthma, pneumonia like symptoms and eye and nose irritation.</ol>
+		<ol>3.  There is no practical way to eliminate all mold and mold spores in the indoor environment; the way to control indoor mold growth is to control moisture.</ol>
+		<ol>4.  Molds can be found almost anywhere; they can grow on virtually any substance, providing moisture is present. There are molds that can grow on wood, paper, carpet, and foods.</ol>
+		</p>
+
+		<p>
+		<b>Questions To Consider Before Remediation</b>
+		<ol>1.  Are there existing moisture problems in the building?</ol>
+		<ol>2.  Have building materials been wet more than 48 hours? ...</ol>
+		<ol>3.  Are there hidden sources of water or is the humidity too high (high enough to cause condensation)?</ol>
+		<ol>4.  Are building occupants reporting musty or moldy odors?</ol>
+		<ol>5.  Are building occupants reporting health problems?</ol>
+		<ol>6.  Are building materials or furnishings visibly damaged?</ol>
+		<ol>7.  Has maintenance been delayed or the maintenance plan been altered?</ol>
+		<ol>8.  Has the building been recently remodeled or has building use changed?</ol>
+		<ol>9.  Is consultation with medical or health professionals indicated?</ol>
+		</p>
+		Presentation Title: <cite>moldremediation.pdf</cite> Retrieved May 07, 2016, from https://www.epa.gov/sites/production/files/2014-08/documents/moldremediation.pdf
+	</article>
+	</div>
+
+</body>
+</html>

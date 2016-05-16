@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<title>MOLD REMEDIATION</title>
+	<link rel="stylesheet" href="css/mold.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
+	<script src="js/startdiction.js"></script>
+	<script>
+		var needToConfirm = true;
+	  
+	  window.onbeforeunload = confirmExit;
+	  function confirmExit()
+	  {
+	    if (needToConfirm)
+	      window.speechSynthesis.cancel();
+	  }
+	</script>
+	<style>
+		body{
+			background-image: url("dark-wood.jpg");
+		}
+	</style>
+</head>
+<body>
+
+	<script>
+		$(function() {
+
+		var worte = new SpeechSynthesisUtterance("MOLD REMEDIATION.  Testing buildings for mold is time‐consuming, expensive, and unreliable.  No safe levels of mold has been established.  The most important actions to stop or prevent mold growth are: keep the building dry, stop leaks, get rid of mold-contaminated items, fix sources of dampness and notify the school administration when problems are not addressed.  Unfortunately inadequate maintenance will allow molds to spread on ceilings, behind and on walls, on floors and carpets, and in books and other water-absorbing materials.  Molds are a type of fungus.  They eat or digest what they are growing on, and they grow colonies by producing long filaments of cells that form visible fuzzy or slimy patches.  If you see fuzzy, slimy or discolored surfaces, especially in damp or wet areas, it's probably mold.  Molds are often green, purple, or orange.  An earthy or musty odor, or a smell like alcohol, is often a sign of hidden molds.  MONITORING SCHOOLS FOR MOLD A walk-through is a good way to check an entire building.  See buttons below for checklist.  <cite>Article Title: Mold At School</cite> Retrieved May 12, 2016, from http://www.healthyschools.org/downloads/Mold_At_School.pdf");
+
+			var stimmen = window.speechSynthesis.getVoices();
+			worte.lang = "it-IT";
+			worte.voice = stimmen[5];
+			worte.pitch = 15;
+			worte.rate = 1;
+			window.speechSynthesis.speak(worte);
+
+			document.getElementById('stop').addEventListener('click', function(event) {
+				event.preventDefault();
+
+				window.speechSynthesis.cancel();
+				advise.innerHTML = 'Speaker Stopped';
+			});
+
+			document.getElementById('pause').addEventListener('click', function(event) {
+				event.preventDefault();
+
+				window.speechSynthesis.pause();
+				advise.innerHTML = 'Speaker Paused';
+			});
+
+			document.getElementById('resume').addEventListener('click', function(event) {
+				event.preventDefault();
+
+				window.speechSynthesis.resume();
+				advise.innerHTML = 'Speaker Resumes';
+			});
+
+			});
+
+	</script>
+
+	<div class="wrapper">
+		<header><h1>MOLD REMEDIATION</h1></header>
+		<nav>
+			<ul>
+				<li><a href="index.html" class="current">HOME</a></li>
+			<li><a href="about.html">ABOUT MOLD</a></li>
+			<li><a href="moldremediationplan.html">MOLD REMEDIATION</a></li>
+			<li><a href="moldprevention.html">MOLD PREVENTION</a></li>
+			</ul>
+		</nav>
+		<div id="btnspk">
+			<span id="btncontrolspeech">
+				<button id="stop" autofocus>Stop Speaking</button>
+				<button id="pause">Pause Speaking</button>
+				<button id="resume">Resume Speaking</button>
+				<span id="advise"></span>
+			</span>
+		</div></br>
+		<article><p><b>Testing </b>buildings for mold is time‐consuming, expensive, and unreliable.  No "safe" levels of mold has been established.  The most important actions to stop or prevent mold growth are: keep the building dry, stop leaks, get rid of mold-contaminated items, fix sources of dampness and notify the school administration when problems are not addressed.</br></br>
+
+		Unfortunately inadequate maintenance will allow molds to spread on ceilings, behind and on walls, on floors and carpets, and in books and other water-absorbing materials.  Molds are a type of fungus.  They eat or digest what they are growing on, and they grow colonies by producing long filaments of cells that form visible fuzzy or slimy patches.</br></br>
+
+		If you see fuzzy, slimy or discolored surfaces, especially in damp or wet areas, it's probably mold.  Molds are often green, purple, or orange.  An earthy or musty odor, or a smell like alcohol, is often a sign of hidden molds.</br></br>
+
+		MONITORING SCHOOLS FOR MOLD</br>
+		A walk-through is a good way to check an entire building.  See buttons below for check list.
+		</p>
+		<cite>Article Title: Mold_At_School</cite> Retrieved May 12, 2016, from http://www.healthyschools.org/downloads/Mold_At_School.pdf
+	</article>
+
+	</div>
+
+	<div class="wrapper2">
+		<a href="cleanuptips.html"><button type="button" class="cleanup">CLEANUP TIPS</button></a>
+		<a href="surfacearea.html"><button type="button" class="cleanup">SURFACE AREA</button></a>
+		<a href="waterloggeditems.html"><button type="button" class="cleanup">WATERLOGGED ITEMS</button></a>
+	</div>
+
+</body>
+</html>

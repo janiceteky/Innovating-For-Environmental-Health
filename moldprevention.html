@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<title>MOLD PREVENTION</title>
+	<link rel="stylesheet" href="css/mold.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
+	<script src="js/startdiction.js"></script>
+	<script>
+		var needToConfirm = true;
+	  
+	  window.onbeforeunload = confirmExit;
+	  function confirmExit()
+	  {
+	    if (needToConfirm)
+	      window.speechSynthesis.cancel();
+	  }
+	</script>
+	<style>
+		body{
+			background-image: url("dark-wood.jpg");
+		}
+	</style>
+</head>
+<body>
+	<script>
+		$(function() {
+
+		var worte = new SpeechSynthesisUtterance("Mold Prevention.  Monitoring schools for mold: the walk­through.  A walk­through is a good way to check an entire building.  Look at the parts of each room.  Don't touch any mold you find.  Go through the likely spots for mold growth.  Pay special attention to any water stains.  Check inside closets and boxes.  Look behind furniture, especially if it is leaning against outside walls.  If you smell a musty, earthy, or alcohol like odor, it is often mold.  Don't forget to look up. Damp ceilings are frequent places to find mold in a school.  It may be necessary for someone to remove a few ceiling tiles or a patch of wall to check for mold.  Only trained individuals should do this, wearing protective gear, and controlling the site to prevent spores from spreading to new areas.  fix leaky plumbing, and stop condensation and leaks      in the building envelope.  To reduce moisture levels indoors, stop leaks, increase ventilation, and/or dehumidify the air.  Schools in damp, humid climates may need to dehumidify the air year-round to prevent mold damage.  Perform regular maintenance on heating, ventilating, and air conditioning (HVAC) equipment.  Keep HVAC drip pans clean, flowing properly, and don't block the airflow with books and papers.  Ventilate damp areas such as janitor's closets, lavatories, shower rooms, pools, and kitchens to the outside. Maintain low indoor humidity year round, below 60% relative humidity (RH), ideally 30-50%, if possible.  Clean floors and other surfaces frequently and thoroughly, minimizing moisture; use vacuums with multi-stage filtration and a HEPA filter or high filtration disk.  (HEPA or high-efficiency particulate air filters prevent very fine particles, such as mold spores, from returning to the vacuumed area from the vacuum cleaner's exhaust.)  Clean and let dry any wet or damp areas or materials within 24‐48 hours.  Don't let building foundations stay wet.  Provide drainage and slope the ground away from the foundation.  Cut back trees and shrubs that are touching the walls; let sunlight and fresh air keep the building dry.  For renovations and new construction, keep building materials dry; keep the site dry; and tell the architect to design the building to be easy to clean and to keep dry.  Monitor the building for leaks and dampness; report and fix problems quickly.  Article Title<cite>Mold At School</cite> retrieved May 12, 2016, http://www.healthyschools.org/downloads/Mold_At_School.pdf");
+
+		var stimmen = window.speechSynthesis.getVoices();
+		worte.lang = "it-IT";
+		worte.voice = stimmen[5];
+		worte.pitch = 15;
+		worte.rate = 1;
+		window.speechSynthesis.speak(worte);
+
+		document.getElementById('stop').addEventListener('click', function(event) {
+				event.preventDefault();
+
+			window.speechSynthesis.cancel();
+			advise.innerHTML = 'Speaker Stopped';
+		});
+
+		document.getElementById('pause').addEventListener('click', function(event) {
+				event.preventDefault();
+
+			window.speechSynthesis.pause();
+			advise.innerHTML = 'Speaker Paused';
+		});
+
+		document.getElementById('resume').addEventListener('click', function(event) {
+				event.preventDefault();
+
+				window.speechSynthesis.resume();
+				advise.innerHTML = 'Speaker Resumes';
+			});
+
+		});
+
+	</script>
+
+	<div class="wrapper">
+		<header><h1>MOLD PREVENTION</h1></header>
+		<nav>
+			<ul>
+				<li><a href="index.html" class="current">HOME</a></li>
+				<li><a href="about.html">ABOUT MOLD</a></li>
+				<li><a href="moldremediationplan.html">MOLD REMEDIATION</a></li>
+				<li><a href="moldprevention.html">MOLD PREVENTION</a></li>
+			</ul>
+		</nav>
+		<div id="btnspk">
+			<span id="btncontrolspeech">
+				<button id="stop" autofocus>Stop Speaking</button>
+				<button id="pause">Pause Speaking</button>
+				<button id="resume">Resume Speaking</button>
+				<span id="advise"></span>
+			</span>
+		</div></br>
+
+		<article>
+			<h2>MONITORING SCHOOLS FOR MOLD</h2>
+			<h3>The Walk-Through</h3>
+			<p><b>A walk­through is a good way to check an entire building.</b><br>
+			<li>Look at the parts of each room. Don't touch any mold you find.</li></br>
+			<li>Go through the likely spots for mold growth. Pay special attention to any water stains.</li></br>
+			<li>Check inside closets and boxes. Look behind furniture, especially if it is leaning against outside walls.  If you smell a musty, earthy, or alcohol-like odor, it is often mold.</li></br>
+
+			<li>Don’t forget to look up—damp ceilings are frequent places to find mold in a school. It may be necessary for someone to remove a few ceiling tiles or a patch of wall to check for mold.  Only trained individuals should do this, wearing protective gear, and controlling the site to prevent spores from spreading to new areas.</li></br>
+			<li>fix leaky plumbing, and stop condensation and leaks in the building envelope.</li></br>
+
+			<li>To reduce moisture levels indoors, stop leaks, increase ventilation, and/or dehumidify the air.  Schools in damp, humid climates may need to dehumidify the air year-round to prevent mold damage.</li></br>
+
+			<li>Perform regular maintenance on heating, ventilating, and air conditioning (HVAC) equipment.  Keep HVAC drip pans clean, flowing properly, and don't block the airflow with books and papers.</li></br>
+
+			<li>Ventilate damp areas such as janitor's closets, lavatories, shower rooms, pools, and kitchens to the outside.</li></br>
+
+			<li>Maintain low indoor humidity year round, below 60% relative humidity (RH), ideally 30-50%, if possible.</li></br>
+
+			<li> Clean floors and other surfaces frequently and thoroughly, minimizing moisture; use vacuums with multi-stage filtration and a HEPA filter or high filtration disk.  (HEPA or high-efficiency particulate air filters prevent very fine particles, such as mold spores, from returning to the vacuumed area from the vacuum cleaner's exhaust.)</li></br>
+
+			<li>Clean and let dry any wet or damp areas or materials within 24‐48 hours.</li></br>
+
+			<li>Don't let building foundations stay wet.  Provide drainage and slope the ground away from the foundation.  Cut back trees and shrubs that are touching the walls; let sunlight and fresh air keep the building dry.  For renovations and new construction, keep building materials dry; keep the site dry; and tell the architect to design the building to be easy to clean and to keep dry.</li></br>
+
+			<li>Monitor the building for leaks and dampness; report and fix problems quickly.</li>
+		</article></br>
+		<cite>Article Title Mold At School http://www.healthyschools.org/downloads/Mold_At_School.pdf</cite>
+	</div>
+</body>
+</html>
